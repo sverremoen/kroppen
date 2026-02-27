@@ -197,38 +197,56 @@ function App() {
             <defs>
               <linearGradient id="shirt" x1="0" y1="0" x2="1" y2="1">
                 <stop offset="0%" stopColor="#60a5fa" />
-                <stop offset="100%" stopColor="#a78bfa" />
+                <stop offset="100%" stopColor="#7c3aed" />
+              </linearGradient>
+              <linearGradient id="pants" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stopColor="#334155" />
+                <stop offset="100%" stopColor="#1e293b" />
               </linearGradient>
             </defs>
 
-            <circle className={selected.id === 'head' ? 'part active' : 'part'} onClick={() => choosePart(PARTS.find((p) => p.id === 'head'))} cx="150" cy="70" r="48" />
+            <path d="M108 52c0-25 19-42 42-42s42 17 42 42v18h-84z" fill="#3f3f46" />
+            <ellipse cx="150" cy="78" rx="44" ry="50" fill="#f5caa8" />
+            <ellipse className={selected.id === 'head' ? 'part active' : 'part'} onClick={() => choosePart(PARTS.find((p) => p.id === 'head'))} cx="150" cy="78" rx="44" ry="50" />
 
-            <ellipse className={selected.id === 'eyes' ? 'part active' : 'part'} onClick={() => choosePart(PARTS.find((p) => p.id === 'eyes'))} cx="132" cy="67" rx="8" ry="6" />
-            <ellipse className={selected.id === 'eyes' ? 'part active' : 'part'} onClick={() => choosePart(PARTS.find((p) => p.id === 'eyes'))} cx="168" cy="67" rx="8" ry="6" />
+            <ellipse className={selected.id === 'ears' ? 'part active' : 'part'} onClick={() => choosePart(PARTS.find((p) => p.id === 'ears'))} cx="102" cy="84" rx="8" ry="12" />
+            <ellipse className={selected.id === 'ears' ? 'part active' : 'part'} onClick={() => choosePart(PARTS.find((p) => p.id === 'ears'))} cx="198" cy="84" rx="8" ry="12" />
 
-            <circle className={selected.id === 'ears' ? 'part active' : 'part'} onClick={() => choosePart(PARTS.find((p) => p.id === 'ears'))} cx="96" cy="75" r="9" />
-            <circle className={selected.id === 'ears' ? 'part active' : 'part'} onClick={() => choosePart(PARTS.find((p) => p.id === 'ears'))} cx="204" cy="75" r="9" />
+            <ellipse className={selected.id === 'eyes' ? 'part active' : 'part'} onClick={() => choosePart(PARTS.find((p) => p.id === 'eyes'))} cx="134" cy="75" rx="10" ry="7" />
+            <ellipse className={selected.id === 'eyes' ? 'part active' : 'part'} onClick={() => choosePart(PARTS.find((p) => p.id === 'eyes'))} cx="166" cy="75" rx="10" ry="7" />
+            <circle cx="134" cy="75" r="2.4" fill="#0f172a" />
+            <circle cx="166" cy="75" r="2.4" fill="#0f172a" />
 
-            <rect className={selected.id === 'nose' ? 'part active' : 'part'} onClick={() => choosePart(PARTS.find((p) => p.id === 'nose'))} x="145" y="77" width="10" height="16" rx="5" />
-            <rect className={selected.id === 'mouth' ? 'part active' : 'part'} onClick={() => choosePart(PARTS.find((p) => p.id === 'mouth'))} x="134" y="100" width="32" height="8" rx="4" />
+            <path className={selected.id === 'nose' ? 'part active' : 'part'} onClick={() => choosePart(PARTS.find((p) => p.id === 'nose'))} d="M150 80l-5 16h10z" />
+            <path className={selected.id === 'mouth' ? 'part active' : 'part'} onClick={() => choosePart(PARTS.find((p) => p.id === 'mouth'))} d="M136 101q14 10 28 0" />
 
-            <rect x="98" y="125" width="104" height="165" rx="34" fill="url(#shirt)" />
+            <rect x="96" y="126" width="108" height="152" rx="36" fill="url(#shirt)" />
 
-            <ellipse className={selected.id === 'heart' ? 'part active' : 'part'} onClick={() => choosePart(PARTS.find((p) => p.id === 'heart'))} cx="135" cy="185" rx="14" ry="14" />
-            <ellipse className={selected.id === 'lungs' ? 'part active' : 'part'} onClick={() => choosePart(PARTS.find((p) => p.id === 'lungs'))} cx="150" cy="178" rx="24" ry="18" />
-            <ellipse className={selected.id === 'stomach' ? 'part active' : 'part'} onClick={() => choosePart(PARTS.find((p) => p.id === 'stomach'))} cx="150" cy="235" rx="24" ry="18" />
+            <rect x="56" y="140" width="30" height="126" rx="14" fill="#f5caa8" />
+            <rect x="214" y="140" width="30" height="126" rx="14" fill="#f5caa8" />
+            <rect className={selected.id === 'arms' ? 'part active' : 'part'} onClick={() => choosePart(PARTS.find((p) => p.id === 'arms'))} x="56" y="140" width="30" height="126" rx="14" />
+            <rect className={selected.id === 'arms' ? 'part active' : 'part'} onClick={() => choosePart(PARTS.find((p) => p.id === 'arms'))} x="214" y="140" width="30" height="126" rx="14" />
 
-            <rect className={selected.id === 'arms' ? 'part active' : 'part'} onClick={() => choosePart(PARTS.find((p) => p.id === 'arms'))} x="58" y="138" width="30" height="118" rx="15" />
-            <rect className={selected.id === 'arms' ? 'part active' : 'part'} onClick={() => choosePart(PARTS.find((p) => p.id === 'arms'))} x="212" y="138" width="30" height="118" rx="15" />
+            <ellipse cx="70" cy="274" rx="16" ry="13" fill="#f5caa8" />
+            <ellipse cx="230" cy="274" rx="16" ry="13" fill="#f5caa8" />
+            <ellipse className={selected.id === 'hands' ? 'part active' : 'part'} onClick={() => choosePart(PARTS.find((p) => p.id === 'hands'))} cx="70" cy="274" rx="16" ry="13" />
+            <ellipse className={selected.id === 'hands' ? 'part active' : 'part'} onClick={() => choosePart(PARTS.find((p) => p.id === 'hands'))} cx="230" cy="274" rx="16" ry="13" />
 
-            <circle className={selected.id === 'hands' ? 'part active' : 'part'} onClick={() => choosePart(PARTS.find((p) => p.id === 'hands'))} cx="72" cy="266" r="14" />
-            <circle className={selected.id === 'hands' ? 'part active' : 'part'} onClick={() => choosePart(PARTS.find((p) => p.id === 'hands'))} cx="228" cy="266" r="14" />
+            <ellipse className={selected.id === 'lungs' ? 'part active' : 'part'} onClick={() => choosePart(PARTS.find((p) => p.id === 'lungs'))} cx="136" cy="182" rx="20" ry="18" />
+            <ellipse className={selected.id === 'lungs' ? 'part active' : 'part'} onClick={() => choosePart(PARTS.find((p) => p.id === 'lungs'))} cx="164" cy="182" rx="20" ry="18" />
+            <path className={selected.id === 'heart' ? 'part active' : 'part'} onClick={() => choosePart(PARTS.find((p) => p.id === 'heart'))} d="M134 188c0-8 6-14 13-14 5 0 9 2 11 6 2-4 6-6 11-6 7 0 13 6 13 14 0 13-12 20-24 31-12-11-24-18-24-31z" />
+            <ellipse className={selected.id === 'stomach' ? 'part active' : 'part'} onClick={() => choosePart(PARTS.find((p) => p.id === 'stomach'))} cx="150" cy="236" rx="25" ry="20" />
 
-            <rect className={selected.id === 'legs' ? 'part active' : 'part'} onClick={() => choosePart(PARTS.find((p) => p.id === 'legs'))} x="118" y="290" width="24" height="145" rx="12" />
-            <rect className={selected.id === 'legs' ? 'part active' : 'part'} onClick={() => choosePart(PARTS.find((p) => p.id === 'legs'))} x="158" y="290" width="24" height="145" rx="12" />
+            <rect x="112" y="278" width="76" height="24" rx="10" fill="url(#pants)" />
+            <rect x="112" y="300" width="30" height="138" rx="14" fill="#1e293b" />
+            <rect x="158" y="300" width="30" height="138" rx="14" fill="#1e293b" />
+            <rect className={selected.id === 'legs' ? 'part active' : 'part'} onClick={() => choosePart(PARTS.find((p) => p.id === 'legs'))} x="112" y="300" width="30" height="138" rx="14" />
+            <rect className={selected.id === 'legs' ? 'part active' : 'part'} onClick={() => choosePart(PARTS.find((p) => p.id === 'legs'))} x="158" y="300" width="30" height="138" rx="14" />
 
-            <ellipse className={selected.id === 'feet' ? 'part active' : 'part'} onClick={() => choosePart(PARTS.find((p) => p.id === 'feet'))} cx="128" cy="448" rx="28" ry="12" />
-            <ellipse className={selected.id === 'feet' ? 'part active' : 'part'} onClick={() => choosePart(PARTS.find((p) => p.id === 'feet'))} cx="172" cy="448" rx="28" ry="12" />
+            <ellipse cx="126" cy="448" rx="30" ry="12" fill="#0f172a" />
+            <ellipse cx="174" cy="448" rx="30" ry="12" fill="#0f172a" />
+            <ellipse className={selected.id === 'feet' ? 'part active' : 'part'} onClick={() => choosePart(PARTS.find((p) => p.id === 'feet'))} cx="126" cy="448" rx="30" ry="12" />
+            <ellipse className={selected.id === 'feet' ? 'part active' : 'part'} onClick={() => choosePart(PARTS.find((p) => p.id === 'feet'))} cx="174" cy="448" rx="30" ry="12" />
           </svg>
 
           <div className="chips">
